@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Link, Route } from 'react-router-dom'
+import './index.css'
+import { Switch, Link, Route } from 'react-router-dom'
 
-import HomePage from '../pages/HomePage'
-import LoginPage from '../pages/LoginPage'
-import RegisterPage from '../pages/RegisterPage'
+import HomePage from '../../pages/HomePage'
+import LoginPage from '../../pages/LoginPage'
+import RegisterPage from '../../pages/RegisterPage'
 
 class Layout extends Component {
     render() {
@@ -20,9 +21,11 @@ class Layout extends Component {
                     </nav>
                 </header>
                 <main>
-                    <Route path="/" component={HomePage} />
-                    <Route path="/login" component={LoginPage} />
-                    <Route path="/register" component={RegisterPage} />
+                    <Switch>
+                        <Route exact path="/" component={HomePage} />
+                        <Route path="/login" component={LoginPage} />
+                        <Route path="/register" component={RegisterPage} />
+                    </Switch>
                 </main>
                 <footer>
                     React Router v4 Browser Example (&copyright;) 2019
