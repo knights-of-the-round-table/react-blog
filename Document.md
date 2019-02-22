@@ -1,0 +1,20 @@
+## Router
+
+- App
+    - dashboard
+    - posts
+        - post
+            - create
+            - edit
+            - detail
+    - categories
+        - category
+            - create
+            - edit
+    - tags
+        - tag
+            - create
+            - edit 
+- Login
+- Register
+- 404

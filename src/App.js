@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import './App.css';
-import { Layout, Menu, Icon } from 'antd';
-import { Switch, Link, Route } from 'react-router-dom'
+import React, { Component } from 'react'
+import { Layout, Menu, Icon } from 'antd'
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
+import './App.css'
 
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout
 
 class App extends Component {
   state = {
     collapsed: false,
-  };
+  }
 
   toggle = () => {
     this.setState({
       collapsed: !this.state.collapsed,
-    });
+    })
   }
 
   render() {
@@ -35,20 +34,20 @@ class App extends Component {
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
               <Menu.Item key="home">
                 <Link to="/">
-                  <Icon type="user" />
-                  <span>Home</span>
+                  <Icon type="dashboard" />
+                  <span>Dashboard</span>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="login">
-                <Link to="/login">
-                  <Icon type="video-camera" />
-                  <span>Login</span>
+              <Menu.Item key="posts">
+                <Link to="/posts">
+                  <Icon type="experiment" />
+                  <span>Posts</span>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="register">
-                <Link to="/register">
-                  <Icon type="upload" />
-                  <span>Register</span>
+              <Menu.Item key="setting">
+                <Link to="/setting">
+                  <Icon type="setting" />
+                  <span>setting</span>
                 </Link>
               </Menu.Item>
             </Menu>
@@ -74,9 +73,9 @@ class App extends Component {
           </Layout>
         </Layout>
       </BrowserRouter>
-    );
+    )
   }
 }
 
 
-export default App;
+export default App
