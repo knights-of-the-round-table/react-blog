@@ -1,0 +1,12 @@
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-wrapper {
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    max-width: 300px;
+    transform: translateY(-50%);
+}

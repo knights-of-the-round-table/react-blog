@@ -2,19 +2,28 @@
 
 - App
     - dashboard
-    - posts
-        - post
+
+    - Articles
+        - article
+            - list
             - create
             - edit
             - detail
-    - categories
-        - category
-            - create
-            - edit
-    - tags
-        - tag
-            - create
-            - edit 
+    - Setting
+        - categories
+            - category
+                - create
+                - edit
+        - tags
+            - tag
+                - create
+                - edit
+    - User
+            - ...
+    
 - Login
 - Register
 - 404
+
+## RESTful
+
