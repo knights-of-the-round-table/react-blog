@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link, Route } from 'react-router-dom'
 import { Layout, Menu, Icon } from 'antd'
 
-import Post from '@/pages/Post'
+import Article from '@/pages/Article'
 import Setting from '@/pages/Setting'
 
 const { Header, Sider, Content } = Layout
@@ -36,10 +36,10 @@ class HomePage extends Component {
                                 <span>Dashboard</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="post">
-                            <Link to="/post">
+                        <Menu.Item key="article">
+                            <Link to="/article">
                                 <Icon type="experiment" />
-                                <span>Post</span>
+                                <span>Article</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="setting">
@@ -62,7 +62,7 @@ class HomePage extends Component {
                         margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280,
                     }}
                     >
-                        <Route path="/post" component={Post} />
+                        <Route path="/article" component={Article} />
                         <Route path="/setting" component={Setting} />
                     </Content>
                 </Layout>

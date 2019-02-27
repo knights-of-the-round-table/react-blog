@@ -1,8 +1,7 @@
 ## Router
 
-- App
+- Home
     - dashboard
-
     - Articles
         - article
             - list

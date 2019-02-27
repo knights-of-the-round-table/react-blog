@@ -12,13 +12,11 @@ $green: #1ff042;
 	}
 }
 
-body{
-  background-color: #001529;
-}
-
 .terminal{
 	position: relative;
+	min-height: 100vh;
 	padding: 4rem;
+	background-color: #001529;
 
 	.prompt{
 		color: $green;
