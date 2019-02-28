@@ -1,23 +1,26 @@
-.container {
+.layout-press {
     display: flex;
     height: 100vh;
     flex-direction: row;
     background-color: #f7f7f7;
-}
 
-.categories {
-    margin-right: 10px;
-    width: 200px;
-    background-color: #fff;
-}
-
-.articles {
-    margin-right: 10px;
-    width: 300px;
-    background-color: #fff;
-}
-
-.article {
-    flex: auto;
-    background-color: #fff;
+    &-sidebar {
+        width: 70px;
+        background-color: #2749f1;
+    }
+    
+    &-categories {
+        width: 270px;
+        background-color: #f3f5f8;
+    }
+    
+    &-articles {
+        width: 340px;
+        background-color: #fff;
+    }
+    
+    &-article {
+        flex: auto;
+        background-color: #f3f5f8;
+    }
 }

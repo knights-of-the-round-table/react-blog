@@ -1,0 +1,27 @@
+.categories {
+    padding: 20px 25px;
+    color: #768191;
+
+    .category {
+        line-height: 50px;
+
+        &.active {
+            color: #2b50ed;
+
+            .category-icon {
+                color: #2b50ed;
+            }
+        }
+
+        .category-icon {
+            margin-right: 24px;
+            font-size: 24px;
+            color: #bac3d0;
+            vertical-align: middle;
+        }
+
+        .category-name {
+            vertical-align: middle;
+        }
+    }
+}
