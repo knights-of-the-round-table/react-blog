@@ -1,11 +1,13 @@
 .categories {
-    padding: 20px 25px;
+    padding: 28px 26px;
     color: #768191;
 
     .category {
-        line-height: 50px;
+        margin-bottom: 16px;
+        line-height: 35px;
 
-        &.active {
+        &.active,
+        &:hover {
             color: #2b50ed;
 
             .category-icon {
@@ -15,7 +17,7 @@
 
         .category-icon {
             margin-right: 24px;
-            font-size: 24px;
+            font-size: 18px;
             color: #bac3d0;
             vertical-align: middle;
         }
