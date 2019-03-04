@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Icon } from 'antd'
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import './index.scss'
 
@@ -8,6 +8,7 @@ class Sidebar extends Component {
     state = {
         navigates: [
             {
+                path: '/',
                 icon: 'home'
             },
             {
@@ -15,12 +16,15 @@ class Sidebar extends Component {
                 icon: 'read'
             },
             {
+                path: '/user',
                 icon: 'team'
             },
             {
+                path: '/setting',
                 icon: 'setting'
             },
             {
+                path: '/notification',
                 icon: 'bell'
             }
         ]
@@ -35,7 +39,9 @@ class Sidebar extends Component {
                 <ul className="navigator">
                     {this.state.navigates.map((navigate, index) =>
                         <nav className={this.props.location.pathname === navigate.path ? 'active' : ''} key={index}>
-                            <Icon className="icon" type={navigate.icon} />
+                            <Link to={navigate.path}>
+                                <Icon className="icon" type={navigate.icon} />
+                            </Link>
                         </nav>
                     )}
                 </ul>
