@@ -1,35 +1,36 @@
 import Home from '@/pages/Home'
 import Login from '@/pages/Login'
-import Setting from '@/pages/Setting'
-import Press from '@/pages/Press'
 import Register from '@/pages/Register'
-// import NotFound from '@/pages/NotFound'
+import NotFound from '@/pages/NotFound'
+
+import dashboard from './dashboard'
+import press from './press'
+import setting from './setting'
+import user from './user'
 
 export default [
     {
         path: '/login',
+        exact: true,
         component: Login
     },
     {
         path: '/register',
+        exact: true,
         component: Register
     },
-    // {
-    //     path: '/*',
-    //     component: NotFound
-    // },
     {
         path: '/',
         component: Home,
         routes: [
-            {
-                path: '/setting',
-                component: Setting
-            },
-            {
-                path: '/press',
-                component: Press
-            }
+            ...dashboard,
+            press,
+            setting,
+            ...user
         ]
+    },
+    {
+        path: '/*',
+        component: NotFound
     },
 ]

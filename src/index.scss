@@ -1,31 +1,12 @@
+body {
+  margin: 0;
+  background-color: #f3f5f8;
+}
+
 ul {
   margin: 0;
   padding: 0;
 }
 li {
   list-style: none;
-}
-
-#root > .ant-layout {
-  min-height: 100vh;
-}
-
-.ant-layout-header {
-  .trigger {
-    font-size: 18px;
-    line-height: 64px;
-    padding: 0 24px;
-    cursor: pointer;
-    transition: color .3s;
-
-    &:hover {
-      color: #1890ff;
-    }
-  }
-
-  .logo {
-    height: 32px;
-    background: rgba(255,255,255,.2);
-    margin: 16px;
-  }
 }

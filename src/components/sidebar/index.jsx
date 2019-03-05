@@ -8,7 +8,7 @@ class Sidebar extends Component {
     state = {
         navigates: [
             {
-                path: '/',
+                path: '/dashboard',
                 icon: 'home'
             },
             {
@@ -22,10 +22,6 @@ class Sidebar extends Component {
             {
                 path: '/setting',
                 icon: 'setting'
-            },
-            {
-                path: '/notification',
-                icon: 'bell'
             }
         ]
     }
