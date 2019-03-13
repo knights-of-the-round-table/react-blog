@@ -16,7 +16,7 @@
         padding: 28px 0;
     }
 
-    .navigator {
+    &__navigator {
         nav {
             $size: 40px;
 
@@ -35,10 +35,11 @@
 
             a {
                 display: block;
+                color: #fff;
             }
         }
 
-        .icon {
+        &-icon {
             color: #fff;
         }
     }

@@ -32,11 +32,11 @@ class Sidebar extends Component {
                 <header>
                     <Icon className="icon" type='search' style={{ color: '#fff' }} />
                 </header>
-                <ul className="navigator">
+                <ul className="sidebar__navigator">
                     {this.state.navigates.map((navigate, index) =>
                         <nav className={this.props.location.pathname === navigate.path ? 'active' : ''} key={index}>
                             <Link to={navigate.path}>
-                                <Icon className="icon" type={navigate.icon} />
+                                <Icon className="sidebar__navigator-icon" type={navigate.icon} />
                             </Link>
                         </nav>
                     )}

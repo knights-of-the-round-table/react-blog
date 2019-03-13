@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Categories from './components/categories'
 import Articles from './components/articles'
 import Article from './components/article'
+
 import './index.scss'
 
 class SettingPage extends Component {
