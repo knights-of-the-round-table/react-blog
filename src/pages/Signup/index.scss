@@ -1,0 +1,20 @@
+.signup__page {
+    display: flex;
+    height: 100vh;
+
+    .l-left,
+    .l-right {
+        flex: 1;
+    }
+
+    .l-left {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        background-color: #fff;
+    }
+
+    .l-right {
+        background-color: indigo;
+    }
+}

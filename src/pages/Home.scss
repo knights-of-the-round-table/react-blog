@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+
+  &__aside {
+    flex-shrink: 0;
+  }
+
+  &__main {
+    position: relative;
+    flex: auto;
+  }
+}

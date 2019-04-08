@@ -5,7 +5,7 @@ import {
 
 import './index.scss'
 
-class RegistrationForm extends React.Component {
+class SignupForm extends Component {
     state = {
         confirmDirty: false,
         autoCompleteResult: [],
@@ -85,17 +85,10 @@ class RegistrationForm extends React.Component {
         }
 
         return (
-            <Form onSubmit={this.handleSubmit}>
+            <Form className="signup__form" onSubmit={this.handleSubmit}>
                 <Form.Item
                     {...formItemLayout}
-                    label={(
-                        <span>
-                            Nickname &nbsp;
-                            <Tooltip title="What do you want others to call you?">
-                                <Icon type="question-circle-o" />
-                            </Tooltip>
-                        </span>
-                    )}
+                    label="用户名"
                 >
                     {getFieldDecorator('nickname', {
                         rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
@@ -119,7 +112,14 @@ class RegistrationForm extends React.Component {
                 </Form.Item>
                 <Form.Item
                     {...formItemLayout}
-                    label="Password"
+                    label={(
+                        <span>
+                            密码 &nbsp;
+                            <Tooltip title="不少于6位">
+                                <Icon type="question-circle-o" />
+                            </Tooltip>
+                        </span>
+                    )}
                 >
                     {getFieldDecorator('password', {
                         rules: [{
@@ -133,7 +133,7 @@ class RegistrationForm extends React.Component {
                 </Form.Item>
                 <Form.Item
                     {...formItemLayout}
-                    label="Confirm Password"
+                    label="确认密码"
                 >
                     {getFieldDecorator('confirm', {
                         rules: [{
@@ -147,8 +147,7 @@ class RegistrationForm extends React.Component {
                 </Form.Item>
                 <Form.Item
                     {...formItemLayout}
-                    label="Captcha"
-                    extra="We must make sure that your are a human."
+                    label="验证码"
                 >
                     <Row gutter={8}>
                         <Col span={12}>
@@ -171,25 +170,11 @@ class RegistrationForm extends React.Component {
                     )}
                 </Form.Item>
                 <Form.Item {...tailFormItemLayout}>
-                    <Button type="primary" htmlType="submit">Register</Button>
+                    <Button type="primary" htmlType="submit">Signup</Button>
                 </Form.Item>
             </Form>
         )
     }
 }
 
-const WrappedRegistrationForm = Form.create({ name: 'register' })(RegistrationForm)
-
-class RegisterPage extends Component {
-    render() {
-        return (
-            <main>
-                <div className="registration-wrapper">
-                    <WrappedRegistrationForm />
-                </div>
-            </main>
-        )
-    }
-}
-
-export default RegisterPage
+export default Form.create({ name: 'signup' })(SignupForm)

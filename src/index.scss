@@ -1,12 +1,10 @@
-body {
-  margin: 0;
-  background-color: #f3f5f8;
-}
+@import "~scss/variables";
+@import "~scss/mixins";
+@import "~scss/animations";
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style: none;
+// Normalize
+@import "~scss/normalize";
+
+body {
+  background-color: #f3f5f8;
 }

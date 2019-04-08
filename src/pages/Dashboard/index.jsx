@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Row, Col, Tooltip, Icon } from 'antd'
-import { ChartCard, MiniArea, MiniBar, Field } from 'ant-design-pro/lib/Charts'
+import { ChartCard, MiniArea, MiniBar } from 'ant-design-pro/lib/Charts'
 import Trend from 'ant-design-pro/lib/Trend'
 import moment from 'moment'
 import numeral from 'numeral'

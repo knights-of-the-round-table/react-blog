@@ -265,7 +265,8 @@ module.exports = function (webpackEnv) {
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
-        '@': path.join(__dirname, '..', 'src')
+        '@': path.join(__dirname, '..', 'src'),
+        'scss': path.join(__dirname, '..', 'src/styles')
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
@@ -428,10 +429,23 @@ module.exports = function (webpackEnv) {
                   importLoaders: 2,
                   sourceMap: isEnvProduction
                     ? shouldUseSourceMap
-                    : isEnvDevelopment,
+                    : isEnvDevelopment
                 },
                 'sass-loader'
-              ),
+              ).concat([
+                // sass-resources-loader
+                // add some global sass
+                {
+                  loader: 'sass-resources-loader',
+                  options: {
+                    resources: [
+                      path.join(__dirname, '..', 'src/styles/_variables.scss'),
+                      path.join(__dirname, '..', 'src/styles/_animations.scss'),
+                      path.join(__dirname, '..', 'src/styles/_mixins.scss')
+                    ]
+                  }
+                }
+              ]),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
               // Remove this when webpack adds a warning or an error for this.

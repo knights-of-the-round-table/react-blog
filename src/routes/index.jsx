@@ -1,6 +1,6 @@
 import Home from '@/pages/Home'
 import Login from '@/pages/Login'
-import Register from '@/pages/Register'
+import Signup from '@/pages/Signup'
 import NotFound from '@/pages/NotFound'
 
 import dashboard from './dashboard'
@@ -15,9 +15,9 @@ export default [
         component: Login
     },
     {
-        path: '/register',
+        path: '/signup',
         exact: true,
-        component: Register
+        component: Signup
     },
     {
         path: '/',
